@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Classes\Questions;
+namespace WabLab\Questions;
 
 
 class Question
@@ -24,7 +24,7 @@ class Question
     /**
      * @var array
      */
-    protected $params;
+    protected $properties;
 
     /**
      * @return string
@@ -77,16 +77,17 @@ class Question
     /**
      * @return array
      */
-    public function getParams(): array
+    public function getProperties(): array
     {
-        return $this->params;
+        return $this->properties;
     }
 
     /**
-     * @param array $params
+     * @param array $properties
      */
-    public function setParams(array $params): void
+    public function setProperties(array $properties): void
     {
-        $this->params = $params;
+        $this->properties = $properties;
     }
+
 }
