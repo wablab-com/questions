@@ -1,0 +1,16 @@
+{
+    "name": "wablab-com/questions",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ahmad Saleh",
+            "email": "ahmadfds@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WabLab\\Questions\\": "src/"
+        }
+    }
+}
