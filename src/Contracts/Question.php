@@ -3,7 +3,7 @@
 namespace WabLab\Questions\Contracts;
 
 
-interface Question
+interface Question extends HasPoints
 {
 
     public function getTitle(): string;
