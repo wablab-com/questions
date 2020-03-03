@@ -29,6 +29,13 @@ class Question
     /**
      * @return string
      */
+
+    protected $title;
+    /**
+     * @var string
+     */
+    protected $description;
+
     public function getText(): string
     {
         return $this->text;
@@ -88,6 +95,38 @@ class Question
     public function setProperties(array $properties): void
     {
         $this->properties = $properties;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle(string $title):void
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle():string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription(string $description): void
+    {
+        $this->description = $description;
     }
 
 }
