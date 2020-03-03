@@ -2,9 +2,9 @@
 
 
 namespace WabLab\Questions;
-use \WabLab\Questions\Contracts\InputComponent as InputComponents;
+use \WabLab\Questions\Contracts\InputComponent as InputComponentInterface;
 
-class InputComponent implements InputComponents
+class InputComponent implements InputComponentInterface
 {
 
 }

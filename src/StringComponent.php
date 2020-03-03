@@ -2,23 +2,19 @@
 
 
 namespace WabLab\Questions;
-use \WabLab\Questions\Contracts\StringComponent as StringComponents;
+use \WabLab\Questions\Contracts\StringComponent as StringComponentInterface;
 
-class StringComponent implements StringComponents
+class StringComponent implements StringComponentInterface
 {
     /**
      * @var string
      */
     protected $text;
-    /**
-     * @var array
-     */
-    protected $properties;
 
     /**
      * @param string $text
      */
-    public function setText(string $text):void
+    public function setText(string $text)
     {
         $this->text = $text;
     }
@@ -26,24 +22,9 @@ class StringComponent implements StringComponents
     /**
      * @return string
      */
-    public function getText() :string
+    public function getText(): string
     {
         return $this->text;
     }
 
-    /**
-     * @param $properties
-     */
-    public function setProperties($properties):void
-    {
-        $this->properties = $properties;
-    }
-
-    /**
-     * @return array
-     */
-    public function getProperties():array
-    {
-        return $this->properties;
-    }
 }

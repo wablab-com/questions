@@ -2,9 +2,9 @@
 
 
 namespace WabLab\Questions;
-use \WabLab\Questions\Contracts\OutputComponent as OutputComponents;
+use \WabLab\Questions\Contracts\OutputComponent as OutputComponentInterface;
 
-class OutputComponent implements OutputComponents
+class OutputComponent implements OutputComponentInterface
 {
 
 }

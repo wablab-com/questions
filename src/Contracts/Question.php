@@ -6,6 +6,8 @@ namespace WabLab\Questions\Contracts;
 interface Question extends HasPoints
 {
 
+    public function getId();
+
     public function getTitle(): string;
 
     public function setTitle(string $title);

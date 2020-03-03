@@ -5,10 +5,12 @@ namespace WabLab\Questions;
 
 
 use WabLab\Questions\Contracts\QuestionComponent;
-use \WabLab\Questions\Contracts\QuestionComponentsGroup as QuestionComponentsGroups;
-class QuestionComponentsGroup implements QuestionComponentsGroups
+use \WabLab\Questions\Contracts\QuestionComponentsGroup as QuestionComponentsGroupInterface;
+class QuestionComponentsGroup implements QuestionComponentsGroupInterface
 {
-    public function addQuestionComponent(QuestionComponent $questionComponent){
+    protected $components = [];
 
+    public function addQuestionComponent(QuestionComponent $questionComponent){
+        $this->components[] = $questionComponent;
     }
 }
