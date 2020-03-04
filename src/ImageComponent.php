@@ -37,7 +37,6 @@ class ImageComponent implements ImageComponents
     {
         $this->properties = $properties;
     }
-
     /**
      * @return array
      */
