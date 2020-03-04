@@ -10,10 +10,13 @@ class AddNewFillInTheBlankQuestion implements AddNewFillInTheBlankQuestionInterf
 {
 
     /**
-     * @inheritDoc
+     * @param string $title
+     * @param string $description
+     * @param string $questionAsText
+     * @param float $points
+     * @return FillInTheBlankQuestion
      */
     public function process(string $title, string $description, string $questionAsText, float $points): FillInTheBlankQuestion
     {
-        // TODO: Implement process() method.
     }
 }

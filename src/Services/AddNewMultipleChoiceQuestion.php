@@ -10,7 +10,12 @@ class AddNewMultipleChoiceQuestion implements AddNewMultipleChoiceQuestionInterf
 {
 
     /**
-     * @inheritDoc
+     * @param string $title
+     * @param string $description
+     * @param array $choices
+     * @param array $correctChoices
+     * @param float $points
+     * @return MultipleChoiceQuestion
      */
     public function process(string $title, string $description, array $choices, array $correctChoices, float $points): MultipleChoiceQuestion
     {

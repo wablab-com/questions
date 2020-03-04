@@ -8,18 +8,25 @@ use \WabLab\Questions\Contracts\Question as QuestionInterface;
 class Question implements QuestionRepositoriesInterface
 {
 
+    /**
+     * @param QuestionInterface $question
+     */
     public function save(QuestionInterface $question)
     {
-        // TODO: Implement save() method.
     }
 
+    /**
+     * @param $id
+     */
     public function delete($id)
     {
-        // TODO: Implement delete() method.
     }
 
+    /**
+     * @param $id
+     * @return QuestionInterface
+     */
     public function getById($id):QuestionInterface
     {
-        // TODO: Implement getById() method.
     }
 }

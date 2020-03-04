@@ -9,10 +9,14 @@ class AddNewMultipleSelectionQuestion implements AddNewMultipleSelectionQuestion
 {
 
     /**
-     * @inheritDoc
+     * @param string $title
+     * @param string $description
+     * @param array $choices
+     * @param array $correctChoices
+     * @param float $points
+     * @return MultipleSelectionQuestion
      */
     public function process(string $title, string $description, array $choices, array $correctChoices, float $points): MultipleSelectionQuestion
     {
-        // TODO: Implement process() method.
     }
 }
