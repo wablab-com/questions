@@ -9,6 +9,7 @@ class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestionI
 {
 
     protected $choices = [];
+    protected $id;
 
     public function addChoice(QuestionChoice $questionChoice)
     {
@@ -18,5 +19,10 @@ class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestionI
     public function getChoices(): array
     {
         return $this->choices;
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 }

@@ -9,6 +9,7 @@ use WabLab\Questions\Contracts\QuestionChoice;
 class MultipleSelectionQuestion extends Question implements MultipleSelectionQuestionInterface
 {
     protected $choices = [];
+    protected $id;
 
     public function addChoice(QuestionChoice $questionChoice)
     {
@@ -19,4 +20,9 @@ class MultipleSelectionQuestion extends Question implements MultipleSelectionQue
     {
         return $this->choices;
     }
- }
+
+    public function getId():int
+    {
+        return $this->id;
+    }
+}
