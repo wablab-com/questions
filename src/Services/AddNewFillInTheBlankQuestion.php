@@ -16,6 +16,7 @@ class AddNewFillInTheBlankQuestion implements AddNewFillInTheBlankQuestionInterf
      * @param float $points
      * @return FillInTheBlankQuestion
      */
+
     public function process(string $title, string $description, string $questionAsText, float $points): FillInTheBlankQuestion
     {
     }
