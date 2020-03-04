@@ -2,18 +2,14 @@
 
 
 namespace WabLab\Questions;
-use \WabLab\Questions\Contracts\ImageComponent as ImageComponents;
+use \WabLab\Questions\Contracts\ImageComponent as ImageComponentInterface;
 
-class ImageComponent implements ImageComponents
+class ImageComponent extends OutputComponent implements ImageComponentInterface
 {
     /**
      * @var string
      */
     protected $url;
-    /**
-     * @var array
-     */
-    protected $properties;
 
     /**
      * @param $url
@@ -28,21 +24,6 @@ class ImageComponent implements ImageComponents
     public function getUrl() :string
     {
         return $this->url;
-    }
-
-    /**
-     * @param $properties
-     */
-    public function setProperties(array $properties) :void
-    {
-        $this->properties = $properties;
-    }
-    /**
-     * @return array
-     */
-    public function getProperties():array
-    {
-        return $this->properties;
     }
 
 }

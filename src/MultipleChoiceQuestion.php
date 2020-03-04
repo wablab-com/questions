@@ -2,28 +2,21 @@
 
 
 namespace WabLab\Questions;
-use \WabLab\Questions\Contracts\MultipleChoiceQuestion as MultipleChoiceQuestions;
+use \WabLab\Questions\Contracts\MultipleChoiceQuestion as MultipleChoiceQuestionInterface;
+use WabLab\Questions\Contracts\QuestionChoice;
 
- class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestions
+class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestionInterface
 {
-     /**
-      * @var int
-      */
-    protected $points;
 
-     /**
-      * @return mixed
-      */
-     public function getPoints():int
-     {
-         return $this->points;
-     }
+    protected $choices = [];
 
-     /**
-      * @param int $points
-      */
-     public function setPoints(int $points): void
-     {
-         $this->points = $points;
-     }
- }
+    public function addChoice(QuestionChoice $questionChoice)
+    {
+        $this->choices[] = $questionChoice;
+    }
+
+    public function getChoices(): array
+    {
+        return $this->choices;
+    }
+}

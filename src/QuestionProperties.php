@@ -5,10 +5,12 @@ namespace WabLab\Questions;
 
 
 use WabLab\Questions\Contracts\QuestionProperty;
-use \WabLab\Questions\Contracts\QuestionProperties as QuestionsProperties;
-class QuestionProperties implements QuestionsProperties
+use \WabLab\Questions\Contracts\QuestionProperties as QuestionPropertiesInterface;
+class QuestionProperties implements QuestionPropertiesInterface
 {
-    public function addProperty(QuestionProperty $questionProperty){
+    protected $properties = [];
 
+    public function addProperty(QuestionProperty $questionProperty){
+        $this->properties[] = $questionProperty;
     }
 }

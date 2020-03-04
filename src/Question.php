@@ -3,25 +3,24 @@
 
 namespace WabLab\Questions;
 use \WabLab\Questions\Contracts\Question as QuestionInterface;
+use WabLab\Questions\Traits\HasPoints;
 
-class Question implements  QuestionInterface
+class Question implements QuestionInterface
 {
+
+    use HasPoints;
 
     /**
      * @var string
      */
     protected $title;
+
     /**
      * @var string
      */
     protected $description;
-    /**
-     * @param string $title
-     */
-    /**
-     * @var int
-     */
-    protected $points;
+
+
 
     public function setTitle(string $title):void
     {
@@ -34,19 +33,6 @@ class Question implements  QuestionInterface
     public function getTitle():string
     {
         return $this->title;
-    }
-
-    public function setPoints(int $points)
-    {
-        $this->points = $points;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPoints(): int
-    {
-        return $this->points;
     }
 
     /**
@@ -65,4 +51,5 @@ class Question implements  QuestionInterface
     {
         $this->description = $title;
     }
+
 }

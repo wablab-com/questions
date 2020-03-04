@@ -2,60 +2,31 @@
 
 
 namespace WabLab\Questions;
-use \WabLab\Questions\Contracts\QuestionProperty as QuestionProperties;
+use \WabLab\Questions\Contracts\QuestionProperty as QuestionPropertyInerface;
 
-class QuestionProperty implements QuestionProperties
+class QuestionProperty implements QuestionPropertyInerface
 {
-    /**
-     * @var string
-     */
-    protected $propertyName;
-    /**
-     * @var string
-     */
+
+    protected $name;
     protected $value;
-    /**
-     * @var array
-     */
-    protected $properties;
-    /**
-     * @param string $propertyName
-     * @param $value
-     */
-    public function set(string $propertyName,$value =null):void
+
+    public function setName(string $name)
     {
-        $this->propertyName = $propertyName;
+        $this->name = $name;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setValue($value)
+    {
         $this->value = $value;
     }
 
-    /**
-     * @return string
-     */
-    public function getPropertyName():string
+    public function getValue()
     {
-        return $this->propertyName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPropertyValue(){
         return $this->value;
-    }
-
-    /**
-     * @param array $properties
-     */
-    public function setProperties(array $properties):void
-    {
-        $this->properties = $properties;
-    }
-
-    /**
-     * @return array
-     */
-    public function getProperties():array
-    {
-        return $this->properties;
     }
 }
