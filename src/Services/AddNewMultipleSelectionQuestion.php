@@ -5,6 +5,8 @@ namespace WabLab\Questions\Services;
 
 use WabLab\Questions\Contracts\Descriptor;
 use WabLab\Questions\Contracts\MultipleSelectionQuestion;
+use WabLab\Questions\Contracts\Repositories\MultipleChoiceQuestionRepository;
+use WabLab\Questions\Contracts\Repositories\MultipleSelectionQuestionRepository;
 use WabLab\Questions\Contracts\Repositories\MultipleSelectionQuestionRepostory;
 use \WabLab\Questions\Contracts\Services\AddNewMultipleSelectionQuestion as AddNewMultipleSelectionQuestionInterface;
 class AddNewMultipleSelectionQuestion extends Service
@@ -25,7 +27,7 @@ class AddNewMultipleSelectionQuestion extends Service
         // get Multiple Selection Question repository to save the new created object
         //
 
-       $repository = $this->di->make(MultipleSelectionQuestionRepostory::class); /* @var  $repository \WabLab\Questions\Contracts\Repositories\MultipleSelectionQuestionRepostory */
+       $repository = $this->di->make(MultipleSelectionQuestionRepository::class); /* @var  $repository \WabLab\Questions\Contracts\Repositories\MultipleSelectionQuestionRepository */
         return $repository->save($question);
     }
 }

@@ -11,6 +11,6 @@ interface MultipleChoiceQuestion extends Question
 
     public function getChoice(): array;
 
-    public function addCorrectChoice(array $questionCorrectChoice);
+    public function addCorrectChoice(array $correctChoice);
     public function getCorrectChoice() :array ;
 }

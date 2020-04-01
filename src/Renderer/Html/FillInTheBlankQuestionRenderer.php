@@ -4,16 +4,18 @@
 namespace WabLab\Questions\Renderer\Html;
 
 
+use \WabLab\Questions\Contracts\Renderer\Html\FillInTheBlankQuestion as FillInTheBlankQuestionRendererInterface;
 
-class FillInTheBlankQuestionRenderer implements \WabLab\Questions\Contracts\Renderer\Html\MultipleChoiceQuestion
+
+class FillInTheBlankQuestionRenderer implements FillInTheBlankQuestionRendererInterface
 {
 
     /**
-     * @var \WabLab\Questions\Contracts\MultipleChoiceQuestion
+     * @var \WabLab\Questions\Contracts\FillInTheBlankQuestion
      */
     protected $question;
 
-    public function setQuestion(\WabLab\Questions\Contracts\MultipleChoiceQuestion $question)
+    public function setQuestion(\WabLab\Questions\Contracts\FillInTheBlankQuestion $question)
     {
         $this->question = $question;
     }

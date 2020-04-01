@@ -8,21 +8,32 @@ use WabLab\Questions\Contracts\QuestionChoice;
 
 class MultipleSelectionQuestion extends Question implements MultipleSelectionQuestionInterface
 {
-    protected $choices = [];
+    protected $selection = [];
+    protected $correctSelection = [];
     protected $id;
 
-    public function addChoice(QuestionChoice $questionChoice)
+    public function addSelection(array $questionSelection)
     {
-        $this->choices[] = $questionChoice;
+        $this->selection[] = $questionSelection;
     }
 
-    public function getChoices(): array
+    public function getSelection(): array
     {
-        return $this->choices;
+        return $this->selection;
     }
 
     public function getId():int
     {
         return $this->id;
     }
+
+    public function addCorrectSelection(array $correctSelection)
+    {
+       $this->correctSelection = $correctSelection;
+    }
+
+    public function getCorrectSelection(): array
+    {
+        return  $this->correctSelection;
+     }
 }

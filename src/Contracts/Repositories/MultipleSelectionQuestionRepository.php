@@ -6,7 +6,7 @@ namespace WabLab\Questions\Contracts\Repositories;
 
 use WabLab\Questions\Contracts\MultipleSelectionQuestion;
 
-interface MultipleSelectionQuestionRepostory
+interface MultipleSelectionQuestionRepository
 {
     /**
      * @param MultipleSelectionQuestion $multipleSelectionQuestion

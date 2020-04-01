@@ -10,13 +10,14 @@ class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestionI
 
     protected $choices = [];
     protected $id;
+    protected $correctChoice = [];
 
-    public function addChoice(QuestionChoice $questionChoice)
+    public function addChoice(array $questionChoice)
     {
         $this->choices[] = $questionChoice;
     }
 
-    public function getChoices(): array
+    public function getChoice(): array
     {
         return $this->choices;
     }
@@ -26,4 +27,13 @@ class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestionI
         return $this->id;
     }
 
+    public function addCorrectChoice(array $correctChoice)
+    {
+       $this->correctChoice[] = $correctChoice;
+    }
+
+    public function getCorrectChoice(): array
+    {
+      return $this->correctChoice;
+    }
 }

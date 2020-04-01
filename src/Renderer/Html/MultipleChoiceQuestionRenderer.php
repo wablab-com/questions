@@ -3,16 +3,17 @@
 
 namespace WabLab\Questions\Renderer\Html;
 
+use \WabLab\Questions\Contracts\Renderer\Html\MultipleChoiceQuestion as MultipleChoiceQuestionRendererInterface;
 
 
-class MultipleChoiceQuestionRenderer implements \WabLab\Questions\Contracts\Renderer\Html\MultipleChoiceQuestion
+class MultipleChoiceQuestionRenderer implements MultipleChoiceQuestionRendererInterface
 {
+
+    protected $question;
 
     /**
      * @var \WabLab\Questions\Contracts\MultipleChoiceQuestion
      */
-    protected $question;
-
     public function setQuestion(\WabLab\Questions\Contracts\MultipleChoiceQuestion $question)
     {
         $this->question = $question;
@@ -20,6 +21,10 @@ class MultipleChoiceQuestionRenderer implements \WabLab\Questions\Contracts\Rend
 
     public function render(): string
     {
+        $html ='';
+        $html .='<div>'.$this->question->getBody().'</div>';
+        $html .='<input />';
+        return $html;
 
     }
 }
