@@ -7,8 +7,11 @@ namespace WabLab\Questions\Contracts;
 interface MultipleSelectionQuestion extends Question
 {
 
-    public function addChoice(QuestionChoice $questionChoice);
+    public function addSelection(array $questionSelection);
 
-    public function getChoices(): array;
+    public function getSelection(): array;
+
+    public function addCorrectSelection(array $questionSelection);
+    public function getCorrectSelection(): array;
 
 }
