@@ -17,6 +17,9 @@ class MultipleSelectionQuestionRenderer implements MultipleSelectionQuestionRend
       $this->question = $question;
     }
 
+    /**
+     * @return string
+     */
     public function render(): string
     {
        $html ='';

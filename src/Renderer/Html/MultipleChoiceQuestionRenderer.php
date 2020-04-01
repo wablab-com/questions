@@ -19,6 +19,9 @@ class MultipleChoiceQuestionRenderer implements MultipleChoiceQuestionRendererIn
         $this->question = $question;
     }
 
+    /**
+     * @return string
+     */
     public function render(): string
     {
         $html ='';

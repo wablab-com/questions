@@ -9,11 +9,18 @@ use WabLab\Questions\Contracts\Renderer\Html\ImageMultipleSelectionQuestion;
 class ImageMultipleChoiceQuestionRenderer implements ImageMultipleSelectionQuestion
 {
     protected $question;
+
+    /**
+     * @param \WabLab\Questions\Contracts\MultipleSelectionQuestion $question
+     */
     public function setQuestion(\WabLab\Questions\Contracts\MultipleSelectionQuestion $question)
     {
        $this->question = $question;
     }
 
+    /**
+     * @return string
+     */
     public function render(): string
     {
        $html='';
