@@ -8,12 +8,12 @@ interface Question extends HasPoints
 
     public function getId();
 
-    public function getTitle(): string;
+    public function getBody(): string;
 
-    public function setTitle(string $title);
+    public function setBody(string $question);
 
+    public function getDescriptor(): Descriptor;
 
-    public function getDescription(): string;
+    public function setDescriptor(Descriptor $descriptor);
 
-    public function setDescription(string $title);
 }

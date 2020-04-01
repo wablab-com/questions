@@ -2,9 +2,9 @@
 
 
 namespace WabLab\Questions;
-use \WabLab\Questions\Contracts\ImageComponent as ImageComponentInterface;
+use \WabLab\Questions\Contracts\ImageDescriptor as ImageDescriptorInterface;
 
-class ImageComponent extends OutputComponent implements ImageComponentInterface
+class ImageDescriptor extends Descriptor implements ImageDescriptorInterface
 {
     /**
      * @var string

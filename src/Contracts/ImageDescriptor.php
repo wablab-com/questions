@@ -4,7 +4,7 @@
 namespace WabLab\Questions\Contracts;
 
 
-interface ImageComponent extends OutputComponent
+interface ImageDescriptor extends Descriptor
 {
     public function setUrl(string $url);
     public function getUrl(): string;

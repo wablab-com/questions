@@ -5,19 +5,23 @@ namespace WabLab\Questions;
 
 
 use WabLab\Questions\Contracts\FillInTheBlankQuestion as FillInTheBlankQuestionInterface;
-use WabLab\Questions\Contracts\QuestionComponentsGroup;
 use WabLab\Questions\Traits\HasPoints;
 
-class FillInTheBlankQuestion extends Question implements FillInTheBlankQuestionInterface
+abstract class FillInTheBlankQuestion extends Question implements FillInTheBlankQuestionInterface
 {
 
     use HasPoints;
 
-    protected $questionLines = [];
+    protected $correctAnswer;
 
-    public function addFillInTheBlankLine(QuestionComponentsGroup $questionComponentsGroup)
+    public function getCorrectAnswer(): string
     {
-        $this->questionLines[] = $questionComponentsGroup;
+        return $this->correctAnswer;
+    }
+
+    public function setCorrectAnswer(string $answer)
+    {
+        $this->correctAnswer = $answer;
     }
 
 }

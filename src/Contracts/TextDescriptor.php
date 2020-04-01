@@ -4,7 +4,7 @@
 namespace WabLab\Questions\Contracts;
 
 
-interface StringComponent extends OutputComponent
+interface TextDescriptor extends Descriptor
 {
     public function setText(string $text);
 

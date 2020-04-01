@@ -25,4 +25,5 @@ class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestionI
     {
         return $this->id;
     }
+
 }

@@ -2,10 +2,11 @@
 
 
 namespace WabLab\Questions;
+use WabLab\Questions\Contracts\Descriptor;
 use \WabLab\Questions\Contracts\Question as QuestionInterface;
 use WabLab\Questions\Traits\HasPoints;
 
-class Question implements QuestionInterface
+abstract class Question implements QuestionInterface
 {
 
     use HasPoints;
@@ -13,43 +14,34 @@ class Question implements QuestionInterface
     /**
      * @var string
      */
-    protected $title;
+    protected $body;
 
     /**
-     * @var string
+     * @var Descriptor
      */
-    protected $description;
+    protected $descriptor;
 
 
 
-    public function setTitle(string $title):void
+    public function getBody(): string
     {
-        $this->title = $title;
+        return $this->body;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTitle():string
+    public function setBody(string $question)
     {
-        return $this->title;
+        $this->body = $question;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription(): string
+    public function getDescriptor(): Descriptor
     {
-        return $this->description;
-
+        return $this->descriptor;
     }
 
-    /**
-     * @param string $title
-     */
-    public function setDescription(string $title)
+    public function setDescriptor(Descriptor $descriptor)
     {
-        $this->description = $title;
+        $this->descriptor = $descriptor;
     }
+
 
 }
