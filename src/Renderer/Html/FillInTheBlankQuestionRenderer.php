@@ -23,7 +23,7 @@ class FillInTheBlankQuestionRenderer implements FillInTheBlankQuestionRendererIn
     public function render(): string
     {
         $html = '';
-        $html .= '<div class="row"><div class="form-group">';
+        $html .= '<div class="row"><div class="form-group" id="question">';
         $html .= '<div class="qBody">' . $this->question->getBody() . '</div>';
         $html .= '<input name="" class="qAnswer" value="" />';
         $html .= '</div></div>';
