@@ -38,7 +38,7 @@ class AddNewMultipleSelectionQuestion extends Service
                 $choiceObj->setIsCorrectAnswer(false);
             }
 
-            $question->addChoice($choiceObj);
+            $question->addSelection($choiceObj);
         }
 
         //
