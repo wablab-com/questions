@@ -23,9 +23,13 @@ class ImageMultipleSelectionQuestionRenderer implements ImageMultipleSelectionQu
      */
     public function render(): string
     {
-        $html ='' ;
+        $html='';
         $html .='<div>'.$this->question->getBody().'</div>';
-        $html .='<input>';
+        $html .='<select>';
+        foreach ($this->question->getSelection() as $key=> $item){
+            $html.= '<option value=""><img name="" src="" /></option>';
+        }
+        $html .='</select>';
         return $html;
     }
 }

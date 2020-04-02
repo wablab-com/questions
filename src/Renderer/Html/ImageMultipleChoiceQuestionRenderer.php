@@ -4,16 +4,16 @@
 namespace WabLab\Questions\Renderer\Html;
 
 
-use WabLab\Questions\Contracts\Renderer\Html\ImageMultipleSelectionQuestion;
+use WabLab\Questions\Contracts\Renderer\Html\ImageMultipleChoiceQuestion;
 
-class ImageMultipleChoiceQuestionRenderer implements ImageMultipleSelectionQuestion
+class ImageMultipleChoiceQuestionRenderer implements ImageMultipleChoiceQuestion
 {
     protected $question;
 
     /**
-     * @param \WabLab\Questions\Contracts\MultipleSelectionQuestion $question
+     * @param \WabLab\Questions\Contracts\MultipleChoiceQuestion $question
      */
-    public function setQuestion(\WabLab\Questions\Contracts\MultipleSelectionQuestion $question)
+    public function setQuestion(\WabLab\Questions\Contracts\MultipleChoiceQuestion $question)
     {
        $this->question = $question;
     }
@@ -25,7 +25,12 @@ class ImageMultipleChoiceQuestionRenderer implements ImageMultipleSelectionQuest
     {
        $html='';
        $html .='<div>'.$this->question->getBody().'</div>';
-       $html .='<input>';
-       return $html;
-    }
+       $html .='<select>';
+      foreach ($this->question->getSelection() as $key=> $item){
+          $html.= '<option value=""><img name="" src="" /></option>';
+      }
+      $html .='</select>';
+      return $html;
+
+     }
 }

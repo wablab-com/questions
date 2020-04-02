@@ -24,9 +24,13 @@ class MultipleChoiceQuestionRenderer implements MultipleChoiceQuestionRendererIn
      */
     public function render(): string
     {
-        $html ='';
+        $html='';
         $html .='<div>'.$this->question->getBody().'</div>';
-        $html .='<input />';
+        $html .='<select>';
+        foreach ($this->question->getSelection() as $key=> $item){
+            $html.= '<option value=""></option>';
+        }
+        $html .='</select>';
         return $html;
 
     }
