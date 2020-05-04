@@ -12,12 +12,12 @@ class MultipleChoiceQuestion extends Question implements MultipleChoiceQuestionI
     protected $id;
     protected $correctChoice = [];
 
-    public function addChoice(array $questionChoice)
+    public function addChoice(QuestionChoice $questionChoice)
     {
         $this->choices[] = $questionChoice;
     }
 
-    public function getChoice(): array
+    public function getChoices(): array
     {
         return $this->choices;
     }
